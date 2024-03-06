@@ -4,6 +4,11 @@
 
 "My IMDb" is a web application developed using Next.js. It provides a platform for users to explore and interact with IMDb data in a user-friendly app!
 
+## Environments
+
+Prod : https://my-imdb-silk.vercel.app/
+Local: http://localhost:3000/
+
 ## Environment Variables
 
 Create a `.env` file in the root of your project and add the following variables:
