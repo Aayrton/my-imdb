@@ -5,12 +5,16 @@ module.exports = {
   setupFiles: ["<rootDir>/env-setup.ts"],
   setupFilesAfterEnv: ["<rootDir>/setupTests.ts"],
   testPathIgnorePatterns: ["/node_modules/", "/dist/"],
-  globals: {
-    'ts-jest': {
+  moduleNameMapper: {
+    '\\.(css|less|scss|sss|styl)$': '<rootDir>/src/__mocks__/styleMock.ts',
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
+  transform: {
+    '^.+\\.tsx?$': ['ts-jest', {
       tsconfig: {
         jsx: 'react-jsx',
       },
-    },
+    },],
   },
 };
 
